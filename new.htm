@@ -1,0 +1,839 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en" lang="en">
+  <head>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+        <title></title>
+    <link rel="shortcut icon" href="/favicon.ico" />    
+    <link rel="stylesheet" href="css/bootstrap.min.css" />
+    <link rel="stylesheet" href="css/bootstrap-responsive.min.css" />
+
+    <link rel="stylesheet" type="text/css" media="screen" href="/css/jobs.css" />
+      <style type="text/css">#sfWebDebug {   padding: 0;   margin: 0;   font-family: Arial, sans-serif;   font-size: 12px;   color: #333;   text-align: left;   line-height: 12px; }  #sfWebDebug a, #sfWebDebug a:hover {   text-decoration: none;   border: none;   background-color: transparent;   color: #000; }  #sfWebDebug img {   float: none;   margin: 0;   border: 0;   display: inline; }  #sfWebDebugBar {   position: absolute;   margin: 0;   padding: 1px 0;   right: 0px;   top: 0px;   opacity: 0.80;   filter: alpha(opacity:80);   z-index: 10000;   white-space: nowrap;   background-color: #ddd; }  #sfWebDebugBar[id] {   position: fixed; }  #sfWebDebugBar img {   vertical-align: middle; }  #sfWebDebugBar .sfWebDebugMenu {   padding: 5px;   padding-left: 0;   display: inline;   margin: 0; }  #sfWebDebugBar .sfWebDebugMenu li {   display: inline;   list-style: none;   margin: 0;   padding: 0 6px; }  #sfWebDebugBar .sfWebDebugMenu li.last {   margin: 0;   padding: 0;   border: 0; }  #sfWebDebugDatabaseDetails li {   margin: 0;   margin-left: 30px;   padding: 5px 0; }  #sfWebDebugShortMessages li {   margin-bottom: 10px;   padding: 5px;   background-color: #ddd; }  #sfWebDebugShortMessages li {   list-style: none; }  #sfWebDebugDetails {   margin-right: 7px; }  #sfWebDebug pre {   line-height: 1.3;   margin-bottom: 10px; }  #sfWebDebug h1 {   font-size: 16px;   font-weight: bold;   margin: 20px 0;   padding: 0;   border: 0px;   background-color: #eee; }  #sfWebDebug h2 {   font-size: 14px;   font-weight: bold;   margin: 10px 0;   padding: 0;   border: 0px;   background: none; }  #sfWebDebug h3 {   font-size: 12px;   font-weight: bold;   margin: 10px 0;   padding: 0;   border: 0px;   background: none; }  #sfWebDebug .sfWebDebugTop {   position: absolute;   left: 0px;   top: 0px;   width: 98%;   padding: 0 1%;   margin: 0;   z-index: 9999;   background-color: #efefef;   border-bottom: 1px solid #aaa; }  #sfWebDebugLog {   margin: 0;   padding: 3px;   font-size: 11px; }  #sfWebDebugLogMenu {   margin-bottom: 5px; }  #sfWebDebugLogMenu li {   display: inline;   list-style: none;   margin: 0;   padding: 0 5px;   border-right: 1px solid #aaa; }  #sfWebDebugConfigSummary {   display: inline;   padding: 5px;   background-color: #ddd;   border: 1px solid #aaa;   margin: 20px 0; }  #sfWebDebugConfigSummary li {   list-style: none;   display: inline;   margin: 0;   padding: 0 5px; }  #sfWebDebugConfigSummary li.last {   border: 0; }  .sfWebDebugInfo, .sfWebDebugInfo td {   background-color: #ddd; }  .sfWebDebugWarning, .sfWebDebugWarning td {   background-color: orange !important; }  .sfWebDebugError, .sfWebDebugError td {   background-color: #f99 !important; }  .sfWebDebugLogNumber {   width: 1%; }  .sfWebDebugLogType {   width: 1%;   white-space: nowrap; }  .sfWebDebugLogType, #sfWebDebug .sfWebDebugLogType a {   color: darkgreen; }  #sfWebDebug .sfWebDebugLogType a:hover {   text-decoration: underline; }  .sfWebDebugLogInfo {   color: blue; }  .ison {   color: #3f3;   margin-right: 5px; }  .isoff {   color: #f33;   margin-right: 5px;   text-decoration: line-through; }  .sfWebDebugLogs {   padding: 0;   margin: 0;   border: 1px solid #999;   font-family: Arial;   font-size: 11px; }  .sfWebDebugLogs tr {   padding: 0;   margin: 0;   border: 0; }  .sfWebDebugLogs td {   margin: 0;   border: 0;   padding: 1px 3px;   vertical-align: top; }  .sfWebDebugLogs th {   margin: 0;   border: 0;   padding: 3px 5px;   vertical-align: top;   background-color: #999;   color: #eee;   white-space: nowrap; }  .sfWebDebugDebugInfo {   color: #999;   font-size: 11px;   margin: 5px 0 5px 10px;   padding: 2px 0 2px 5px;   border-left: 1px solid #aaa;   line-height: 1.25em; }  .sfWebDebugDebugInfo .sfWebDebugLogInfo, .sfWebDebugDebugInfo a.sfWebDebugFileLink {   color: #333 !important; }  .sfWebDebugCache {   padding: 0;   margin: 0;   font-family: Arial;   position: absolute;   overflow: hidden;   z-index: 995;   font-size: 9px;   padding: 2px;   filter:alpha(opacity=85);   -moz-opacity:0.85;   opacity: 0.85; }  #sfWebDebugSymfonyVersion {   margin-left: 0;   padding: 1px 4px;   background-color: #666;   color: #fff; }  #sfWebDebugviewDetails ul {   padding-left: 2em;   margin: .5em 0;   list-style: none; }  #sfWebDebugviewDetails li {   margin-bottom: .5em; }  #sfWebDebug .sfWebDebugDataType, #sfWebDebug .sfWebDebugDataType a {   color: #666;   font-style: italic; }  #sfWebDebug .sfWebDebugDataType a:hover {   text-decoration: underline; }  #sfWebDebugDatabaseLogs {   margin-bottom: 10px; }  #sfWebDebugDatabaseLogs ol {   margin: 0;   padding: 0;   margin-left: 20px;   list-style: number; }  #sfWebDebugDatabaseLogs li {   padding: 6px; }  #sfWebDebugDatabaseLogs li:nth-child(odd) {   background-color: #CCC; }  .sfWebDebugDatabaseQuery {   margin-bottom: .5em;   margin-top: 0; }  .sfWebDebugDatabaseLogInfo {   color: #666;   font-size: 11px; }  .sfWebDebugDatabaseQuery .sfWebDebugLogInfo {   color: #909;   font-weight: bold; }  .sfWebDebugHighlight {   background: #FFC; }</style></head>
+  <body>
+    <h1>New Post</h1>
+
+
+<form action="/frontend_dev.php/default/create" method="post" >
+  <table>
+    <tfoot>
+      <tr>
+        <td colspan="2">
+          &nbsp;<a href="/frontend_dev.php/">Back to list</a>
+                    <input type="submit" value="Save" class="btn" />
+        </td>
+      </tr>
+    </tfoot>
+    <tbody>
+      <tr>
+  <th><label for="post_author">Author</label></th>
+  <td><input type="text" name="post[author]" id="post_author" /></td>
+</tr>
+<tr>
+  <th><label for="post_title">Title</label></th>
+  <td><input type="text" name="post[title]" id="post_title" /></td>
+</tr>
+<tr>
+  <th><label for="post_body">Body</label></th>
+  <td><textarea rows="4" cols="30" name="post[body]" id="post_body"></textarea></td>
+</tr>
+<tr>
+  <th><label for="post_created_at">Created at</label></th>
+  <td><select name="post[created_at][month]" id="post_created_at_month">
+<option value="" selected="selected"></option>
+<option value="1">01</option>
+<option value="2">02</option>
+<option value="3">03</option>
+<option value="4">04</option>
+<option value="5">05</option>
+<option value="6">06</option>
+<option value="7">07</option>
+<option value="8">08</option>
+<option value="9">09</option>
+<option value="10">10</option>
+<option value="11">11</option>
+<option value="12">12</option>
+</select>/<select name="post[created_at][day]" id="post_created_at_day">
+<option value="" selected="selected"></option>
+<option value="1">01</option>
+<option value="2">02</option>
+<option value="3">03</option>
+<option value="4">04</option>
+<option value="5">05</option>
+<option value="6">06</option>
+<option value="7">07</option>
+<option value="8">08</option>
+<option value="9">09</option>
+<option value="10">10</option>
+<option value="11">11</option>
+<option value="12">12</option>
+<option value="13">13</option>
+<option value="14">14</option>
+<option value="15">15</option>
+<option value="16">16</option>
+<option value="17">17</option>
+<option value="18">18</option>
+<option value="19">19</option>
+<option value="20">20</option>
+<option value="21">21</option>
+<option value="22">22</option>
+<option value="23">23</option>
+<option value="24">24</option>
+<option value="25">25</option>
+<option value="26">26</option>
+<option value="27">27</option>
+<option value="28">28</option>
+<option value="29">29</option>
+<option value="30">30</option>
+<option value="31">31</option>
+</select>/<select name="post[created_at][year]" id="post_created_at_year">
+<option value="" selected="selected"></option>
+<option value="2008">2008</option>
+<option value="2009">2009</option>
+<option value="2010">2010</option>
+<option value="2011">2011</option>
+<option value="2012">2012</option>
+<option value="2013">2013</option>
+<option value="2014">2014</option>
+<option value="2015">2015</option>
+<option value="2016">2016</option>
+<option value="2017">2017</option>
+<option value="2018">2018</option>
+</select> <select name="post[created_at][hour]" id="post_created_at_hour">
+<option value="" selected="selected"></option>
+<option value="0">00</option>
+<option value="1">01</option>
+<option value="2">02</option>
+<option value="3">03</option>
+<option value="4">04</option>
+<option value="5">05</option>
+<option value="6">06</option>
+<option value="7">07</option>
+<option value="8">08</option>
+<option value="9">09</option>
+<option value="10">10</option>
+<option value="11">11</option>
+<option value="12">12</option>
+<option value="13">13</option>
+<option value="14">14</option>
+<option value="15">15</option>
+<option value="16">16</option>
+<option value="17">17</option>
+<option value="18">18</option>
+<option value="19">19</option>
+<option value="20">20</option>
+<option value="21">21</option>
+<option value="22">22</option>
+<option value="23">23</option>
+</select>:<select name="post[created_at][minute]" id="post_created_at_minute">
+<option value="" selected="selected"></option>
+<option value="0">00</option>
+<option value="1">01</option>
+<option value="2">02</option>
+<option value="3">03</option>
+<option value="4">04</option>
+<option value="5">05</option>
+<option value="6">06</option>
+<option value="7">07</option>
+<option value="8">08</option>
+<option value="9">09</option>
+<option value="10">10</option>
+<option value="11">11</option>
+<option value="12">12</option>
+<option value="13">13</option>
+<option value="14">14</option>
+<option value="15">15</option>
+<option value="16">16</option>
+<option value="17">17</option>
+<option value="18">18</option>
+<option value="19">19</option>
+<option value="20">20</option>
+<option value="21">21</option>
+<option value="22">22</option>
+<option value="23">23</option>
+<option value="24">24</option>
+<option value="25">25</option>
+<option value="26">26</option>
+<option value="27">27</option>
+<option value="28">28</option>
+<option value="29">29</option>
+<option value="30">30</option>
+<option value="31">31</option>
+<option value="32">32</option>
+<option value="33">33</option>
+<option value="34">34</option>
+<option value="35">35</option>
+<option value="36">36</option>
+<option value="37">37</option>
+<option value="38">38</option>
+<option value="39">39</option>
+<option value="40">40</option>
+<option value="41">41</option>
+<option value="42">42</option>
+<option value="43">43</option>
+<option value="44">44</option>
+<option value="45">45</option>
+<option value="46">46</option>
+<option value="47">47</option>
+<option value="48">48</option>
+<option value="49">49</option>
+<option value="50">50</option>
+<option value="51">51</option>
+<option value="52">52</option>
+<option value="53">53</option>
+<option value="54">54</option>
+<option value="55">55</option>
+<option value="56">56</option>
+<option value="57">57</option>
+<option value="58">58</option>
+<option value="59">59</option>
+</select></td>
+</tr>
+<tr>
+  <th><label for="post_updated_at">Updated at</label></th>
+  <td><select name="post[updated_at][month]" id="post_updated_at_month">
+<option value="" selected="selected"></option>
+<option value="1">01</option>
+<option value="2">02</option>
+<option value="3">03</option>
+<option value="4">04</option>
+<option value="5">05</option>
+<option value="6">06</option>
+<option value="7">07</option>
+<option value="8">08</option>
+<option value="9">09</option>
+<option value="10">10</option>
+<option value="11">11</option>
+<option value="12">12</option>
+</select>/<select name="post[updated_at][day]" id="post_updated_at_day">
+<option value="" selected="selected"></option>
+<option value="1">01</option>
+<option value="2">02</option>
+<option value="3">03</option>
+<option value="4">04</option>
+<option value="5">05</option>
+<option value="6">06</option>
+<option value="7">07</option>
+<option value="8">08</option>
+<option value="9">09</option>
+<option value="10">10</option>
+<option value="11">11</option>
+<option value="12">12</option>
+<option value="13">13</option>
+<option value="14">14</option>
+<option value="15">15</option>
+<option value="16">16</option>
+<option value="17">17</option>
+<option value="18">18</option>
+<option value="19">19</option>
+<option value="20">20</option>
+<option value="21">21</option>
+<option value="22">22</option>
+<option value="23">23</option>
+<option value="24">24</option>
+<option value="25">25</option>
+<option value="26">26</option>
+<option value="27">27</option>
+<option value="28">28</option>
+<option value="29">29</option>
+<option value="30">30</option>
+<option value="31">31</option>
+</select>/<select name="post[updated_at][year]" id="post_updated_at_year">
+<option value="" selected="selected"></option>
+<option value="2008">2008</option>
+<option value="2009">2009</option>
+<option value="2010">2010</option>
+<option value="2011">2011</option>
+<option value="2012">2012</option>
+<option value="2013">2013</option>
+<option value="2014">2014</option>
+<option value="2015">2015</option>
+<option value="2016">2016</option>
+<option value="2017">2017</option>
+<option value="2018">2018</option>
+</select> <select name="post[updated_at][hour]" id="post_updated_at_hour">
+<option value="" selected="selected"></option>
+<option value="0">00</option>
+<option value="1">01</option>
+<option value="2">02</option>
+<option value="3">03</option>
+<option value="4">04</option>
+<option value="5">05</option>
+<option value="6">06</option>
+<option value="7">07</option>
+<option value="8">08</option>
+<option value="9">09</option>
+<option value="10">10</option>
+<option value="11">11</option>
+<option value="12">12</option>
+<option value="13">13</option>
+<option value="14">14</option>
+<option value="15">15</option>
+<option value="16">16</option>
+<option value="17">17</option>
+<option value="18">18</option>
+<option value="19">19</option>
+<option value="20">20</option>
+<option value="21">21</option>
+<option value="22">22</option>
+<option value="23">23</option>
+</select>:<select name="post[updated_at][minute]" id="post_updated_at_minute">
+<option value="" selected="selected"></option>
+<option value="0">00</option>
+<option value="1">01</option>
+<option value="2">02</option>
+<option value="3">03</option>
+<option value="4">04</option>
+<option value="5">05</option>
+<option value="6">06</option>
+<option value="7">07</option>
+<option value="8">08</option>
+<option value="9">09</option>
+<option value="10">10</option>
+<option value="11">11</option>
+<option value="12">12</option>
+<option value="13">13</option>
+<option value="14">14</option>
+<option value="15">15</option>
+<option value="16">16</option>
+<option value="17">17</option>
+<option value="18">18</option>
+<option value="19">19</option>
+<option value="20">20</option>
+<option value="21">21</option>
+<option value="22">22</option>
+<option value="23">23</option>
+<option value="24">24</option>
+<option value="25">25</option>
+<option value="26">26</option>
+<option value="27">27</option>
+<option value="28">28</option>
+<option value="29">29</option>
+<option value="30">30</option>
+<option value="31">31</option>
+<option value="32">32</option>
+<option value="33">33</option>
+<option value="34">34</option>
+<option value="35">35</option>
+<option value="36">36</option>
+<option value="37">37</option>
+<option value="38">38</option>
+<option value="39">39</option>
+<option value="40">40</option>
+<option value="41">41</option>
+<option value="42">42</option>
+<option value="43">43</option>
+<option value="44">44</option>
+<option value="45">45</option>
+<option value="46">46</option>
+<option value="47">47</option>
+<option value="48">48</option>
+<option value="49">49</option>
+<option value="50">50</option>
+<option value="51">51</option>
+<option value="52">52</option>
+<option value="53">53</option>
+<option value="54">54</option>
+<option value="55">55</option>
+<option value="56">56</option>
+<option value="57">57</option>
+<option value="58">58</option>
+<option value="59">59</option>
+</select><input type="hidden" name="post[id]" id="post_id" />
+<input type="hidden" name="post[_csrf_token]" value="51fcf4bc5188ae193799403b067b36a9" id="post__csrf_token" /></td>
+</tr>
+    </tbody>
+  </table>
+</form>
+  <script type="text/javascript">/* <![CDATA[ */
+function sfWebDebugGetElementsByClassName(strClass, strTag, objContElm)
+{
+  // http://muffinresearch.co.uk/archives/2006/04/29/getelementsbyclassname-deluxe-edition/
+  strTag = strTag || "*";
+  objContElm = objContElm || document;
+  var objColl = (strTag == '*' && document.all) ? document.all : objContElm.getElementsByTagName(strTag);
+  var arr = new Array();
+  var delim = strClass.indexOf('|') != -1  ? '|' : ' ';
+  var arrClass = strClass.split(delim);
+  var j = objColl.length;
+  for (var i = 0; i < j; i++) {
+    if(objColl[i].className == undefined) continue;
+    var arrObjClass = objColl[i].className.split(' ');
+    if (delim == ' ' && arrClass.length > arrObjClass.length) continue;
+    var c = 0;
+    comparisonLoop:
+    {
+      var l = arrObjClass.length;
+      for (var k = 0; k < l; k++) {
+        var n = arrClass.length;
+        for (var m = 0; m < n; m++) {
+          if (arrClass[m] == arrObjClass[k]) c++;
+          if (( delim == '|' && c == 1) || (delim == ' ' && c == arrClass.length)) {
+            arr.push(objColl[i]);
+            break comparisonLoop;
+          }
+        }
+      }
+    }
+  }
+  return arr;
+}
+
+function sfWebDebugToggleMenu()
+{
+  var element = document.getElementById('sfWebDebugDetails');
+
+  var cacheElements = sfWebDebugGetElementsByClassName('sfWebDebugCache');
+  var mainCacheElements = sfWebDebugGetElementsByClassName('sfWebDebugActionCache');
+  var panelElements = sfWebDebugGetElementsByClassName('sfWebDebugTop');
+
+  if (element.style.display != 'none')
+  {
+    for (var i = 0; i < panelElements.length; ++i)
+    {
+      panelElements[i].style.display = 'none';
+    }
+
+    // hide all cache information
+    for (var i = 0; i < cacheElements.length; ++i)
+    {
+      cacheElements[i].style.display = 'none';
+    }
+    for (var i = 0; i < mainCacheElements.length; ++i)
+    {
+      mainCacheElements[i].style.border = 'none';
+    }
+  }
+  else
+  {
+    for (var i = 0; i < cacheElements.length; ++i)
+    {
+      cacheElements[i].style.display = '';
+    }
+    for (var i = 0; i < mainCacheElements.length; ++i)
+    {
+      mainCacheElements[i].style.border = '1px solid #f00';
+    }
+  }
+
+  sfWebDebugToggle('sfWebDebugDetails');
+  sfWebDebugToggle('sfWebDebugShowMenu');
+  sfWebDebugToggle('sfWebDebugHideMenu');
+}
+
+function sfWebDebugShowDetailsFor(element)
+{
+  if (typeof element == 'string')
+    element = document.getElementById(element);
+
+  var panelElements = sfWebDebugGetElementsByClassName('sfWebDebugTop');
+  for (var i = 0; i < panelElements.length; ++i)
+  {
+    if (panelElements[i] != element)
+    {
+      panelElements[i].style.display = 'none';
+    }
+  }
+
+  sfWebDebugToggle(element);
+}
+
+function sfWebDebugToggle(element)
+{
+  if (typeof element == 'string')
+    element = document.getElementById(element);
+
+  if (element)
+    element.style.display = element.style.display == 'none' ? '' : 'none';
+}
+
+function sfWebDebugToggleMessages(klass)
+{
+  var elements = sfWebDebugGetElementsByClassName(klass);
+
+  var x = elements.length;
+  for (var i = 0; i < x; ++i)
+  {
+    sfWebDebugToggle(elements[i]);
+  }
+}
+
+function sfWebDebugToggleAllLogLines(show, klass)
+{
+  var elements = sfWebDebugGetElementsByClassName(klass);
+  var x = elements.length;
+  for (var i = 0; i < x; ++i)
+  {
+    elements[i].style.display = show ? '' : 'none';
+  }
+}
+
+function sfWebDebugShowOnlyLogLines(type)
+{
+  var types = new Array();
+  types[0] = 'info';
+  types[1] = 'warning';
+  types[2] = 'error';
+  for (klass in types)
+  {
+    var elements = sfWebDebugGetElementsByClassName('sfWebDebug' + types[klass].substring(0, 1).toUpperCase() + types[klass].substring(1, types[klass].length));
+    var x = elements.length;
+    for (var i = 0; i < x; ++i)
+    {
+      if ('tr' == elements[i].tagName.toLowerCase())
+      {
+        elements[i].style.display = (type == types[klass]) ? '' : 'none';
+      }
+    }
+  }
+}
+/* ]]> */</script>
+      <div id="sfWebDebug">
+        <div id="sfWebDebugBar">
+          <a href="#" onclick="sfWebDebugToggleMenu(); return false;"><img src="/sf/sf_web_debug/images/sf.png" alt="Debug toolbar" /></a>
+
+          <ul id="sfWebDebugDetails" class="sfWebDebugMenu">
+            <li><span id="sfWebDebugSymfonyVersion">1.4.0</span></li>
+<li class="sfWebDebugInfo"><a title="Configuration" href="#" onclick="sfWebDebugShowDetailsFor('sfWebDebugconfigDetails'); return false;"><img src="/sf/sf_web_debug/images/config.png" alt="Config" /> config</a></li>
+<li class="sfWebDebugInfo"><a title="View Layer" href="#" onclick="sfWebDebugShowDetailsFor('sfWebDebugviewDetails'); return false;"><img src="/sf/sf_web_debug/images/view.png" alt="View Layer" /> view</a></li>
+<li class="sfWebDebugInfo"><a title="Logs" href="#" onclick="sfWebDebugShowDetailsFor('sfWebDebuglogsDetails'); return false;"><img src="/sf/sf_web_debug/images/log.png" alt="Log" /> logs</a></li>
+<li><img src="/sf/sf_web_debug/images/memory.png" alt="Memory" /> 6656.0 KB</li>
+<li class="sfWebDebugInfo"><a title="Timers" href="#" onclick="sfWebDebugShowDetailsFor('sfWebDebugtimeDetails'); return false;"><img src="/sf/sf_web_debug/images/time.png" alt="Time" /> 173 ms</a></li>
+            <li class="last">
+              <a href="#" onclick="document.getElementById('sfWebDebug').style.display='none'; return false;"><img src="/sf/sf_web_debug/images/close.png" alt="Close" /></a>
+            </li>
+          </ul>
+        </div>
+
+        <div id="sfWebDebugconfigDetails" class="sfWebDebugTop" style="display:none"><h1>Configuration</h1><ul id="sfWebDebugConfigSummary"><li class="ison">debug</li><li class="ison">xdebug</li><li class="ison">logging</li><li class="isoff">cache</li><li class="isoff">compression</li><li class="ison">tokenizer</li><li class="isoff">eaccelerator</li><li class="isoff">apc</li><li class="isoff last">xcache</li></ul>
+    <h2>Request <a href="#" onclick="sfWebDebugToggle('sfWebDebugRequest'); return false;" title="Toggle details"><img src="/sf/sf_web_debug/images/toggle.gif" alt="Toggle details"/></a></h2>
+    <div id="sfWebDebugRequest" style="display: none"><pre>options:
+  path_info_key: PATH_INFO
+  path_info_array: SERVER
+  default_format: null
+  logging: &#039;1&#039;
+  relative_url_root: null
+  formats: { txt: text/plain, js: [application/javascript, application/x-javascript, text/javascript], css: text/css, json: [application/json, application/x-json], xml: [text/xml, application/xml, application/x-xml], rdf: application/rdf+xml, atom: application/atom+xml }
+  no_script_name: false
+parameterHolder:
+  action: new
+  module: default
+attributeHolder:
+  sf_route: &#039;sfRoute Object()&#039;
+</pre></div>
+    
+    <h2>Response <a href="#" onclick="sfWebDebugToggle('sfWebDebugResponse'); return false;" title="Toggle details"><img src="/sf/sf_web_debug/images/toggle.gif" alt="Toggle details"/></a></h2>
+    <div id="sfWebDebugResponse" style="display: none"><pre>status:
+  code: 200
+  text: OK
+options:
+  http_protocol: HTTP/1.1
+  logging: &#039;1&#039;
+  charset: utf-8
+  send_http_headers: false
+  content_type: &#039;text/html; charset=utf-8&#039;
+cookies: {  }
+httpHeaders:
+  Content-Type: &#039;text/html; charset=utf-8&#039;
+javascripts: {  }
+stylesheets:
+  jobs.css: {  }
+metas: {  }
+httpMetas:
+  Content-Type: &#039;text/html; charset=utf-8&#039;
+</pre></div>
+    
+    <h2>User <a href="#" onclick="sfWebDebugToggle('sfWebDebugUser'); return false;" title="Toggle details"><img src="/sf/sf_web_debug/images/toggle.gif" alt="Toggle details"/></a></h2>
+    <div id="sfWebDebugUser" style="display: none"><pre>options:
+  auto_shutdown: false
+  culture: null
+  default_culture: en
+  use_flash: true
+  logging: &#039;1&#039;
+  timeout: 1800
+attributeHolder: {  }
+culture: en
+</pre></div>
+    
+    <h2>Settings <a href="#" onclick="sfWebDebugToggle('sfWebDebugSettings'); return false;" title="Toggle details"><img src="/sf/sf_web_debug/images/toggle.gif" alt="Toggle details"/></a></h2>
+    <div id="sfWebDebugSettings" style="display: none"><pre>mod_default_enabled: true
+mod_default_view_class: sfPHP
+sf_admin_module_web_dir: /sfDoctrinePlugin
+sf_admin_web_dir: /sf/sf_admin
+sf_app: frontend
+sf_app_base_cache_dir: &#039;D:\crd\cache\frontend&#039;
+sf_app_cache_dir: &#039;D:\crd\cache\frontend\dev&#039;
+sf_app_config_dir: &#039;D:\crd\apps\frontend\config&#039;
+sf_app_dir: &#039;D:\crd\apps\frontend&#039;
+sf_app_i18n_dir: &#039;D:\crd\apps\frontend\i18n&#039;
+sf_app_lib_dir: &#039;D:\crd\apps\frontend\lib&#039;
+sf_app_module_dir: &#039;D:\crd\apps\frontend\modules&#039;
+sf_app_template_dir: &#039;D:\crd\apps\frontend\templates&#039;
+sf_apps_dir: &#039;D:\crd\apps&#039;
+sf_cache: false
+sf_cache_dir: &#039;D:\crd\cache&#039;
+sf_charset: utf-8
+sf_check_lock: false
+sf_compressed: false
+sf_config_cache_dir: &#039;D:\crd\cache\frontend\dev\config&#039;
+sf_config_dir: &#039;D:\crd\config&#039;
+sf_csrf_secret: UniqueSecret
+sf_data_dir: &#039;D:\crd\data&#039;
+sf_debug: true
+sf_default_culture: en
+sf_enabled_modules:
+  - default
+sf_environment: dev
+sf_error_404_action: error404
+sf_error_404_module: default
+sf_error_reporting: 32767
+sf_escaping_method: ESC_SPECIALCHARS
+sf_escaping_strategy: true
+sf_etag: false
+sf_file_link_format: null
+sf_i18n: false
+sf_i18n_cache_dir: &#039;D:\crd\cache\frontend\dev\i18n&#039;
+sf_lib_dir: &#039;D:\crd\lib&#039;
+sf_log_dir: &#039;D:\crd\log&#039;
+sf_logging_enabled: true
+sf_login_action: login
+sf_login_module: default
+sf_module_cache_dir: &#039;D:\crd\cache\frontend\dev\modules&#039;
+sf_module_disabled_action: disabled
+sf_module_disabled_module: default
+sf_no_script_name: false
+sf_orm: doctrine
+sf_plugins_dir: &#039;D:\crd\plugins&#039;
+sf_root_dir: &#039;D:\crd&#039;
+sf_secure_action: secure
+sf_secure_module: default
+sf_standard_helpers:
+  - Partial
+  - Cache
+sf_symfony_lib_dir: &#039;C:\wamp\symfony\lib&#039;
+sf_template_cache_dir: &#039;D:\crd\cache\frontend\dev\template&#039;
+sf_test_cache_dir: &#039;D:\crd\cache\frontend\dev\test&#039;
+sf_test_dir: &#039;D:\crd\test&#039;
+sf_upload_dir: &#039;D:\crd\web\uploads&#039;
+sf_use_database: true
+sf_web_debug: true
+sf_web_debug_web_dir: /sf/sf_web_debug
+sf_web_dir: &#039;D:\crd\web&#039;
+symfony.asset.javascripts_included: true
+symfony.asset.stylesheets_included: true
+</pre></div>
+    
+    <h2>Globals <a href="#" onclick="sfWebDebugToggle('sfWebDebugGlobals'); return false;" title="Toggle details"><img src="/sf/sf_web_debug/images/toggle.gif" alt="Toggle details"/></a></h2>
+    <div id="sfWebDebugGlobals" style="display: none"><pre>cookie:
+  symfony: b86q7crh62u7igpl951nud6qr3
+env: {  }
+files: {  }
+get: {  }
+post: {  }
+server:
+  COMSPEC: &#039;C:\Windows\system32\cmd.exe&#039;
+  CONTEXT_DOCUMENT_ROOT: &#039;D:/crd/web&#039;
+  CONTEXT_PREFIX: &#039;&#039;
+  DOCUMENT_ROOT: &#039;D:/crd/web&#039;
+  GATEWAY_INTERFACE: CGI/1.1
+  HTTP_ACCEPT: &#039;text/html,application/xhtml+xml,application/xml;q=0.9,*/*;q=0.8&#039;
+  HTTP_ACCEPT_ENCODING: &#039;gzip,deflate,sdch&#039;
+  HTTP_ACCEPT_LANGUAGE: &#039;en-US,en;q=0.8&#039;
+  HTTP_CONNECTION: keep-alive
+  HTTP_COOKIE: symfony=b86q7crh62u7igpl951nud6qr3
+  HTTP_HOST: &#039;localhost:86&#039;
+  HTTP_REFERER: &#039;http://localhost:86/frontend_dev.php&#039;
+  HTTP_USER_AGENT: &#039;Mozilla/5.0 (Windows NT 6.1; WOW64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/29.0.1547.66 Safari/537.36&#039;
+  PATH: &#039;C:\Python33\;C:\Program Files (x86)\Intel\iCLS Client\;C:\Program Files\Intel\iCLS Client\;C:\Windows\system32;C:\Windows;C:\Windows\System32\Wbem;C:\Windows\System32\WindowsPowerShell\v1.0\;C:\Program Files\Intel\Intel(R) Management Engine Components\DAL;C:\Program Files\Intel\Intel(R) Management Engine Components\IPT;C:\Program Files (x86)\Intel\Intel(R) Management Engine Components\DAL;C:\Program Files (x86)\Intel\Intel(R) Management Engine Components\IPT;C:\Program Files (x86)\Intel\OpenCL SDK\2.0\bin\x86;C:\Program Files (x86)\Intel\OpenCL SDK\2.0\bin\x64;C:\Program Files\MATLAB\R2011a\runtime\win64;C:\Program Files\MATLAB\R2011a\bin;C:\wamp\bin\php\php5.4.16;C:\wamp\bin\mysql\mysql5.6.12\bin;&#039;
+  PATHEXT: .COM;.EXE;.BAT;.CMD;.VBS;.VBE;.JS;.JSE;.WSF;.WSH;.MSC
+  PATH_INFO: /default/new
+  PATH_TRANSLATED: &#039;D:\crd\web\default\new&#039;
+  PHP_SELF: /frontend_dev.php/default/new
+  QUERY_STRING: &#039;&#039;
+  REMOTE_ADDR: 127.0.0.1
+  REMOTE_PORT: &#039;57121&#039;
+  REQUEST_METHOD: GET
+  REQUEST_SCHEME: http
+  REQUEST_TIME: 1379344916
+  REQUEST_TIME_FLOAT: 1379344916.936
+  REQUEST_URI: /frontend_dev.php/default/new
+  SCRIPT_FILENAME: &#039;D:/crd/web/frontend_dev.php&#039;
+  SCRIPT_NAME: /frontend_dev.php
+  SERVER_ADDR: 127.0.0.1
+  SERVER_ADMIN: admin@example.com
+  SERVER_NAME: localhost
+  SERVER_PORT: &#039;86&#039;
+  SERVER_PROTOCOL: HTTP/1.1
+  SERVER_SIGNATURE: &#039;&#039;
+  SERVER_SOFTWARE: &#039;Apache/2.4.4 (Win32) PHP/5.4.16&#039;
+  SystemRoot: &#039;C:\Windows&#039;
+  WINDIR: &#039;C:\Windows&#039;
+session:
+  symfony/user/sfUser/attributes: {  }
+  symfony/user/sfUser/authenticated: false
+  symfony/user/sfUser/credentials: {  }
+  symfony/user/sfUser/culture: en
+  symfony/user/sfUser/lastRequest: 1379344633
+</pre></div>
+    
+    <h2>Php <a href="#" onclick="sfWebDebugToggle('sfWebDebugPhp'); return false;" title="Toggle details"><img src="/sf/sf_web_debug/images/toggle.gif" alt="Toggle details"/></a></h2>
+    <div id="sfWebDebugPhp" style="display: none"><pre>php: 5.4.16
+os: &#039;Windows NT USER-PC 6.1 build 7600 (Windows 7 Ultimate Edition) i586&#039;
+extensions:
+  31: apache2handler
+  1: bcmath
+  2: calendar
+  0: &#039;Core (5.4.16)&#039;
+  3: ctype
+  4: &#039;date (5.4.16)&#039;
+  23: &#039;dom (20031129)&#039;
+  5: ereg
+  6: &#039;filter (0.11.0)&#039;
+  7: ftp
+  32: gd
+  8: &#039;hash (1.0)&#039;
+  9: iconv
+  10: &#039;json (1.2.1)&#039;
+  22: libxml
+  33: mbstring
+  11: mcrypt
+  38: mhash
+  34: &#039;mysql (1.0)&#039;
+  35: &#039;mysqli (0.1)&#039;
+  18: &#039;mysqlnd (mysqlnd 5.0.10 - 20111026 - $Id: e707c415db32080b3752b232487a435ee0372157 $)&#039;
+  13: &#039;odbc (1.0)&#039;
+  14: pcre
+  24: &#039;PDO (1.0.4dev)&#039;
+  36: &#039;pdo_mysql (1.0.2)&#039;
+  37: &#039;pdo_sqlite (1.0.1)&#039;
+  25: &#039;Phar (2.0.1)&#039;
+  15: &#039;Reflection ($Id: 6c4d8062369898a397e4b128348042f5c01b4427 $)&#039;
+  16: session
+  26: &#039;SimpleXML (0.1)&#039;
+  12: &#039;SPL (0.2)&#039;
+  17: &#039;standard (5.4.16)&#039;
+  19: &#039;tokenizer (0.1)&#039;
+  27: wddx
+  39: &#039;xdebug (2.2.3)&#039;
+  28: xml
+  29: &#039;xmlreader (0.1)&#039;
+  30: &#039;xmlwriter (0.1)&#039;
+  20: &#039;zip (1.11.0)&#039;
+  21: &#039;zlib (2.0)&#039;
+</pre></div>
+    
+    <h2>Symfony <a href="#" onclick="sfWebDebugToggle('sfWebDebugSymfony'); return false;" title="Toggle details"><img src="/sf/sf_web_debug/images/toggle.gif" alt="Toggle details"/></a></h2>
+    <div id="sfWebDebugSymfony" style="display: none"><pre>version: 1.4.0
+path: &#039;C:\wamp\symfony\lib&#039;
+</pre></div>
+    </div>
+<div id="sfWebDebugviewDetails" class="sfWebDebugTop" style="display:none"><h1>View Layer</h1><h2>Template: <span title="SF_ROOT_DIR\apps\frontend\modules/default/templates/newSuccess.php">default&nbsp;&hellip;&nbsp;newSuccess.php</span> <a href="#" onclick="sfWebDebugToggle('sfWebDebugViewTemplate1'); return false;" title="Toggle details"><img src="/sf/sf_web_debug/images/toggle.gif" alt="Toggle details"/></a></h2>
+<div id="sfWebDebugViewTemplate1" style="display:block">
+<p>Parameters:</p>
+<ul>
+<li><code>$form</code> <span class="sfWebDebugDataType">(<span title="SF_ROOT_DIR\lib\form\doctrine\postForm.class.php">postForm</span>)</span>
+<a href="#" onclick="sfWebDebugToggle('sfWebDebugViewForm1'); return false;" title="Toggle details"><img src="/sf/sf_web_debug/images/toggle.gif" alt="Toggle details"/></a>
+<div id="sfWebDebugViewForm1" style="display:none">
+<ul><li>
+<code>$form['id']</code> <span class="sfWebDebugDataType">(<span title="SF_SYMFONY_LIB_DIR\widget\sfWidgetFormInputHidden.class.php">sfWidgetFormInputHidden</span>)</span>
+</li>
+<li>
+<code>$form['author']</code> <span class="sfWebDebugDataType">(<span title="SF_SYMFONY_LIB_DIR\widget\sfWidgetFormInputText.class.php">sfWidgetFormInputText</span>)</span>
+</li>
+<li>
+<code>$form['title']</code> <span class="sfWebDebugDataType">(<span title="SF_SYMFONY_LIB_DIR\widget\sfWidgetFormInputText.class.php">sfWidgetFormInputText</span>)</span>
+</li>
+<li>
+<code>$form['body']</code> <span class="sfWebDebugDataType">(<span title="SF_SYMFONY_LIB_DIR\widget\sfWidgetFormTextarea.class.php">sfWidgetFormTextarea</span>)</span>
+</li>
+<li>
+<code>$form['created_at']</code> <span class="sfWebDebugDataType">(<span title="SF_SYMFONY_LIB_DIR\widget\sfWidgetFormDateTime.class.php">sfWidgetFormDateTime</span>)</span>
+</li>
+<li>
+<code>$form['updated_at']</code> <span class="sfWebDebugDataType">(<span title="SF_SYMFONY_LIB_DIR\widget\sfWidgetFormDateTime.class.php">sfWidgetFormDateTime</span>)</span>
+</li>
+<li>
+<code>$form['_csrf_token']</code> <span class="sfWebDebugDataType">(<span title="SF_SYMFONY_LIB_DIR\widget\sfWidgetFormInputHidden.class.php">sfWidgetFormInputHidden</span>)</span>
+</li></ul>
+</div></li>
+</ul>
+</div>
+<h2>Partial: <span title="SF_ROOT_DIR\apps\frontend\modules/default/templates/_form.php">default&nbsp;&hellip;&nbsp;_form.php</span> <a href="#" onclick="sfWebDebugToggle('sfWebDebugViewTemplate2'); return false;" title="Toggle details"><img src="/sf/sf_web_debug/images/toggle.gif" alt="Toggle details"/></a></h2>
+<div id="sfWebDebugViewTemplate2" style="display:none">
+<p>Parameters:</p>
+<ul>
+<li><code>$form</code> <span class="sfWebDebugDataType">(<span title="SF_ROOT_DIR\lib\form\doctrine\postForm.class.php">postForm</span>)</span>
+<a href="#" onclick="sfWebDebugToggle('sfWebDebugViewForm2'); return false;" title="Toggle details"><img src="/sf/sf_web_debug/images/toggle.gif" alt="Toggle details"/></a>
+<div id="sfWebDebugViewForm2" style="display:none">
+<ul><li>
+<code>$form['id']</code> <span class="sfWebDebugDataType">(<span title="SF_SYMFONY_LIB_DIR\widget\sfWidgetFormInputHidden.class.php">sfWidgetFormInputHidden</span>)</span>
+</li>
+<li>
+<code>$form['author']</code> <span class="sfWebDebugDataType">(<span title="SF_SYMFONY_LIB_DIR\widget\sfWidgetFormInputText.class.php">sfWidgetFormInputText</span>)</span>
+</li>
+<li>
+<code>$form['title']</code> <span class="sfWebDebugDataType">(<span title="SF_SYMFONY_LIB_DIR\widget\sfWidgetFormInputText.class.php">sfWidgetFormInputText</span>)</span>
+</li>
+<li>
+<code>$form['body']</code> <span class="sfWebDebugDataType">(<span title="SF_SYMFONY_LIB_DIR\widget\sfWidgetFormTextarea.class.php">sfWidgetFormTextarea</span>)</span>
+</li>
+<li>
+<code>$form['created_at']</code> <span class="sfWebDebugDataType">(<span title="SF_SYMFONY_LIB_DIR\widget\sfWidgetFormDateTime.class.php">sfWidgetFormDateTime</span>)</span>
+</li>
+<li>
+<code>$form['updated_at']</code> <span class="sfWebDebugDataType">(<span title="SF_SYMFONY_LIB_DIR\widget\sfWidgetFormDateTime.class.php">sfWidgetFormDateTime</span>)</span>
+</li>
+<li>
+<code>$form['_csrf_token']</code> <span class="sfWebDebugDataType">(<span title="SF_SYMFONY_LIB_DIR\widget\sfWidgetFormInputHidden.class.php">sfWidgetFormInputHidden</span>)</span>
+</li></ul>
+</div></li>
+</ul>
+</div></div>
+<div id="sfWebDebuglogsDetails" class="sfWebDebugTop" style="display:none"><h1>Logs</h1>
+      <ul id="sfWebDebugLogMenu">
+        <li><a href="#" onclick="sfWebDebugToggleAllLogLines(true, 'sfWebDebugLogLine'); return false;">[all]</a></li>
+        <li><a href="#" onclick="sfWebDebugToggleAllLogLines(false, 'sfWebDebugLogLine'); return false;">[none]</a></li>
+        <li><a href="#" onclick="sfWebDebugShowOnlyLogLines('info'); return false;"><img src="/sf/sf_web_debug/images/info.png" alt="Show only infos" /></a></li>
+        <li><a href="#" onclick="sfWebDebugShowOnlyLogLines('warning'); return false;"><img src="/sf/sf_web_debug/images/warning.png" alt="Show only warnings" /></a></li>
+        <li><a href="#" onclick="sfWebDebugShowOnlyLogLines('error'); return false;"><img src="/sf/sf_web_debug/images/error.png" alt="Show only errors" /></a></li>
+        <li><a href="#" onclick="sfWebDebugToggleMessages('defaultActions'); return false;">defaultActions</a></li>
+<li><a href="#" onclick="sfWebDebugToggleMessages('sfFilterChain'); return false;">sfFilterChain</a></li>
+<li><a href="#" onclick="sfWebDebugToggleMessages('sfPHPView'); return false;">sfPHPView</a></li>
+<li><a href="#" onclick="sfWebDebugToggleMessages('sfPartialView'); return false;">sfPartialView</a></li>
+<li><a href="#" onclick="sfWebDebugToggleMessages('sfPatternRouting'); return false;">sfPatternRouting</a></li>
+<li><a href="#" onclick="sfWebDebugToggleMessages('sfWebDebugLogger'); return false;">sfWebDebugLogger</a></li>
+<li><a href="#" onclick="sfWebDebugToggleMessages('sfWebResponse'); return false;">sfWebResponse</a></li>
+      </ul>
+      <div id="sfWebDebugLogLines"><table class="sfWebDebugLogs">
+      <tr>
+        <th>#</th>
+        <th>type</th>
+        <th>message</th>
+      </tr>
+<tr class='sfWebDebugLogLine sfWebDebugInfo sfPatternRouting'><td class="sfWebDebugLogNumber">1</td><td class="sfWebDebugLogType"><img src="/sf/sf_web_debug/images/info.png" alt="Info"/>&nbsp;<span title="SF_SYMFONY_LIB_DIR\routing\sfPatternRouting.class.php">sfPatternRouting</span></td><td>Match route "<span class="sfWebDebugLogInfo">default</span>" (/:module/:action/*) for /default/new with parameters array (  &#039;module&#039; =&gt; &#039;default&#039;,  &#039;action&#039; =&gt; &#039;new&#039;,) <a href="#" onclick="sfWebDebugToggle('sfWebDebugPanelLogsDebug1'); return false;" title="Toggle debug stack"><img src="/sf/sf_web_debug/images/toggle.gif" alt="Toggle debug stack"/></a><div class="sfWebDebugDebugInfo" id="sfWebDebugPanelLogsDebug1" style="display:none"><span class="">#5 &raquo; in <span class="sfWebDebugLogInfo">sfPatternRouting->parse()</span> from SF_ROOT_DIR\cache\frontend\dev\config\config_factories.yml.php line 103</span><br/><span class="">#4 &raquo; in <span class="sfWebDebugLogInfo">require()</span> from SF_SYMFONY_LIB_DIR\util\sfContext.class.php line 155</span><br/><span class="">#3 &raquo; in <span class="sfWebDebugLogInfo">sfContext->loadFactories()</span> from SF_SYMFONY_LIB_DIR\util\sfContext.class.php line 77</span><br/><span class="">#2 &raquo; in <span class="sfWebDebugLogInfo">sfContext->initialize()</span> from SF_SYMFONY_LIB_DIR\util\sfContext.class.php line 60</span><br/><span class="sfWebDebugHighlight">#1 &raquo; in <span class="sfWebDebugLogInfo">sfContext::createInstance()</span> from SF_ROOT_DIR\web\frontend_dev.php line 13</span><br/></div>
+</td></tr>
+<tr class='sfWebDebugLogLine sfWebDebugInfo sfFilterChain'><td class="sfWebDebugLogNumber">2</td><td class="sfWebDebugLogType"><img src="/sf/sf_web_debug/images/info.png" alt="Info"/>&nbsp;<span title="SF_SYMFONY_LIB_DIR\filter\sfFilterChain.class.php">sfFilterChain</span></td><td>Executing filter "<span class="sfWebDebugLogInfo">sfRenderingFilter</span>" <a href="#" onclick="sfWebDebugToggle('sfWebDebugPanelLogsDebug2'); return false;" title="Toggle debug stack"><img src="/sf/sf_web_debug/images/toggle.gif" alt="Toggle debug stack"/></a><div class="sfWebDebugDebugInfo" id="sfWebDebugPanelLogsDebug2" style="display:none"><span class="">#4 &raquo; in <span class="sfWebDebugLogInfo">sfFilterChain->execute()</span> from SF_SYMFONY_LIB_DIR\controller\sfController.class.php line 229</span><br/><span class="">#3 &raquo; in <span class="sfWebDebugLogInfo">sfController->forward()</span> from SF_SYMFONY_LIB_DIR\controller\sfFrontWebController.class.php line 48</span><br/><span class="">#2 &raquo; in <span class="sfWebDebugLogInfo">sfFrontWebController->dispatch()</span> from SF_SYMFONY_LIB_DIR\util\sfContext.class.php line 170</span><br/><span class="sfWebDebugHighlight">#1 &raquo; in <span class="sfWebDebugLogInfo">sfContext->dispatch()</span> from SF_ROOT_DIR\web\frontend_dev.php line 13</span><br/></div>
+</td></tr>
+<tr class='sfWebDebugLogLine sfWebDebugInfo sfFilterChain'><td class="sfWebDebugLogNumber">3</td><td class="sfWebDebugLogType"><img src="/sf/sf_web_debug/images/info.png" alt="Info"/>&nbsp;<span title="SF_SYMFONY_LIB_DIR\filter\sfFilterChain.class.php">sfFilterChain</span></td><td>Executing filter "<span class="sfWebDebugLogInfo">sfExecutionFilter</span>" <a href="#" onclick="sfWebDebugToggle('sfWebDebugPanelLogsDebug3'); return false;" title="Toggle debug stack"><img src="/sf/sf_web_debug/images/toggle.gif" alt="Toggle debug stack"/></a><div class="sfWebDebugDebugInfo" id="sfWebDebugPanelLogsDebug3" style="display:none"><span class="">#6 &raquo; in <span class="sfWebDebugLogInfo">sfFilterChain->execute()</span> from SF_SYMFONY_LIB_DIR\filter\sfRenderingFilter.class.php line 33</span><br/><span class="">#5 &raquo; in <span class="sfWebDebugLogInfo">sfRenderingFilter->execute()</span> from SF_SYMFONY_LIB_DIR\filter\sfFilterChain.class.php line 53</span><br/><span class="">#4 &raquo; in <span class="sfWebDebugLogInfo">sfFilterChain->execute()</span> from SF_SYMFONY_LIB_DIR\controller\sfController.class.php line 229</span><br/><span class="">#3 &raquo; in <span class="sfWebDebugLogInfo">sfController->forward()</span> from SF_SYMFONY_LIB_DIR\controller\sfFrontWebController.class.php line 48</span><br/><span class="">#2 &raquo; in <span class="sfWebDebugLogInfo">sfFrontWebController->dispatch()</span> from SF_SYMFONY_LIB_DIR\util\sfContext.class.php line 170</span><br/><span class="sfWebDebugHighlight">#1 &raquo; in <span class="sfWebDebugLogInfo">sfContext->dispatch()</span> from SF_ROOT_DIR\web\frontend_dev.php line 13</span><br/></div>
+</td></tr>
+<tr class='sfWebDebugLogLine sfWebDebugInfo defaultActions'><td class="sfWebDebugLogNumber">4</td><td class="sfWebDebugLogType"><img src="/sf/sf_web_debug/images/info.png" alt="Info"/>&nbsp;<span title="SF_ROOT_DIR\apps\frontend\modules\default\actions\actions.class.php">defaultActions</span></td><td>Call "<span class="sfWebDebugLogInfo">defaultActions-&gt;executeNew()</span>" <a href="#" onclick="sfWebDebugToggle('sfWebDebugPanelLogsDebug4'); return false;" title="Toggle debug stack"><img src="/sf/sf_web_debug/images/toggle.gif" alt="Toggle debug stack"/></a><div class="sfWebDebugDebugInfo" id="sfWebDebugPanelLogsDebug4" style="display:none"><span class="">#10 &raquo; in <span class="sfWebDebugLogInfo">sfActions->execute()</span> from SF_SYMFONY_LIB_DIR\filter\sfExecutionFilter.class.php line 92</span><br/><span class="">#9 &raquo; in <span class="sfWebDebugLogInfo">sfExecutionFilter->executeAction()</span> from SF_SYMFONY_LIB_DIR\filter\sfExecutionFilter.class.php line 78</span><br/><span class="">#8 &raquo; in <span class="sfWebDebugLogInfo">sfExecutionFilter->handleAction()</span> from SF_SYMFONY_LIB_DIR\filter\sfExecutionFilter.class.php line 42</span><br/><span class="">#7 &raquo; in <span class="sfWebDebugLogInfo">sfExecutionFilter->execute()</span> from SF_SYMFONY_LIB_DIR\filter\sfFilterChain.class.php line 53</span><br/><span class="">#6 &raquo; in <span class="sfWebDebugLogInfo">sfFilterChain->execute()</span> from SF_SYMFONY_LIB_DIR\filter\sfRenderingFilter.class.php line 33</span><br/><span class="">#5 &raquo; in <span class="sfWebDebugLogInfo">sfRenderingFilter->execute()</span> from SF_SYMFONY_LIB_DIR\filter\sfFilterChain.class.php line 53</span><br/><span class="">#4 &raquo; in <span class="sfWebDebugLogInfo">sfFilterChain->execute()</span> from SF_SYMFONY_LIB_DIR\controller\sfController.class.php line 229</span><br/><span class="">#3 &raquo; in <span class="sfWebDebugLogInfo">sfController->forward()</span> from SF_SYMFONY_LIB_DIR\controller\sfFrontWebController.class.php line 48</span><br/><span class="">#2 &raquo; in <span class="sfWebDebugLogInfo">sfFrontWebController->dispatch()</span> from SF_SYMFONY_LIB_DIR\util\sfContext.class.php line 170</span><br/><span class="sfWebDebugHighlight">#1 &raquo; in <span class="sfWebDebugLogInfo">sfContext->dispatch()</span> from SF_ROOT_DIR\web\frontend_dev.php line 13</span><br/></div>
+</td></tr>
+<tr class='sfWebDebugLogLine sfWebDebugInfo sfPHPView'><td class="sfWebDebugLogNumber">5</td><td class="sfWebDebugLogType"><img src="/sf/sf_web_debug/images/info.png" alt="Info"/>&nbsp;<span title="SF_SYMFONY_LIB_DIR\view\sfPHPView.class.php">sfPHPView</span></td><td>Render "<span class="sfWebDebugLogInfo">sf_app_dir\modules/default/templates/newSuccess.php</span>" <a href="#" onclick="sfWebDebugToggle('sfWebDebugPanelLogsDebug5'); return false;" title="Toggle debug stack"><img src="/sf/sf_web_debug/images/toggle.gif" alt="Toggle debug stack"/></a><div class="sfWebDebugDebugInfo" id="sfWebDebugPanelLogsDebug5" style="display:none"><span class="">#11 &raquo; in <span class="sfWebDebugLogInfo">sfPHPView->renderFile()</span> from SF_SYMFONY_LIB_DIR\view\sfPHPView.class.php line 179</span><br/><span class="">#10 &raquo; in <span class="sfWebDebugLogInfo">sfPHPView->render()</span> from SF_SYMFONY_LIB_DIR\filter\sfExecutionFilter.class.php line 155</span><br/><span class="">#9 &raquo; in <span class="sfWebDebugLogInfo">sfExecutionFilter->executeView()</span> from SF_SYMFONY_LIB_DIR\filter\sfExecutionFilter.class.php line 116</span><br/><span class="">#8 &raquo; in <span class="sfWebDebugLogInfo">sfExecutionFilter->handleView()</span> from SF_SYMFONY_LIB_DIR\filter\sfExecutionFilter.class.php line 47</span><br/><span class="">#7 &raquo; in <span class="sfWebDebugLogInfo">sfExecutionFilter->execute()</span> from SF_SYMFONY_LIB_DIR\filter\sfFilterChain.class.php line 53</span><br/><span class="">#6 &raquo; in <span class="sfWebDebugLogInfo">sfFilterChain->execute()</span> from SF_SYMFONY_LIB_DIR\filter\sfRenderingFilter.class.php line 33</span><br/><span class="">#5 &raquo; in <span class="sfWebDebugLogInfo">sfRenderingFilter->execute()</span> from SF_SYMFONY_LIB_DIR\filter\sfFilterChain.class.php line 53</span><br/><span class="">#4 &raquo; in <span class="sfWebDebugLogInfo">sfFilterChain->execute()</span> from SF_SYMFONY_LIB_DIR\controller\sfController.class.php line 229</span><br/><span class="">#3 &raquo; in <span class="sfWebDebugLogInfo">sfController->forward()</span> from SF_SYMFONY_LIB_DIR\controller\sfFrontWebController.class.php line 48</span><br/><span class="">#2 &raquo; in <span class="sfWebDebugLogInfo">sfFrontWebController->dispatch()</span> from SF_SYMFONY_LIB_DIR\util\sfContext.class.php line 170</span><br/><span class="sfWebDebugHighlight">#1 &raquo; in <span class="sfWebDebugLogInfo">sfContext->dispatch()</span> from SF_ROOT_DIR\web\frontend_dev.php line 13</span><br/></div>
+</td></tr>
+<tr class='sfWebDebugLogLine sfWebDebugInfo sfPartialView'><td class="sfWebDebugLogNumber">6</td><td class="sfWebDebugLogType"><img src="/sf/sf_web_debug/images/info.png" alt="Info"/>&nbsp;<span title="SF_SYMFONY_LIB_DIR\view\sfPartialView.class.php">sfPartialView</span></td><td>Render "<span class="sfWebDebugLogInfo">sf_app_dir\modules/default/templates/_form.php</span>" <a href="#" onclick="sfWebDebugToggle('sfWebDebugPanelLogsDebug6'); return false;" title="Toggle debug stack"><img src="/sf/sf_web_debug/images/toggle.gif" alt="Toggle debug stack"/></a><div class="sfWebDebugDebugInfo" id="sfWebDebugPanelLogsDebug6" style="display:none"><span class="">#16 &raquo; in <span class="sfWebDebugLogInfo">sfPHPView->renderFile()</span> from SF_SYMFONY_LIB_DIR\view\sfPartialView.class.php line 110</span><br/><span class="">#15 &raquo; in <span class="sfWebDebugLogInfo">sfPartialView->render()</span> from SF_SYMFONY_LIB_DIR\helper\PartialHelper.php line 218</span><br/><span class="">#14 &raquo; in <span class="sfWebDebugLogInfo">get_partial()</span> from SF_SYMFONY_LIB_DIR\helper\PartialHelper.php line 180</span><br/><span class="sfWebDebugHighlight">#13 &raquo; in <span class="sfWebDebugLogInfo">include_partial()</span> from SF_ROOT_DIR\apps\frontend\modules\default\templates\newSuccess.php line 3</span><br/><span class="">#12 &raquo; in <span class="sfWebDebugLogInfo">require()</span> from SF_SYMFONY_LIB_DIR\view\sfPHPView.class.php line 75</span><br/><span class="">#11 &raquo; in <span class="sfWebDebugLogInfo">sfPHPView->renderFile()</span> from SF_SYMFONY_LIB_DIR\view\sfPHPView.class.php line 179</span><br/><span class="">#10 &raquo; in <span class="sfWebDebugLogInfo">sfPHPView->render()</span> from SF_SYMFONY_LIB_DIR\filter\sfExecutionFilter.class.php line 155</span><br/><span class="">#9 &raquo; in <span class="sfWebDebugLogInfo">sfExecutionFilter->executeView()</span> from SF_SYMFONY_LIB_DIR\filter\sfExecutionFilter.class.php line 116</span><br/><span class="">#8 &raquo; in <span class="sfWebDebugLogInfo">sfExecutionFilter->handleView()</span> from SF_SYMFONY_LIB_DIR\filter\sfExecutionFilter.class.php line 47</span><br/><span class="">#7 &raquo; in <span class="sfWebDebugLogInfo">sfExecutionFilter->execute()</span> from SF_SYMFONY_LIB_DIR\filter\sfFilterChain.class.php line 53</span><br/><span class="">#6 &raquo; in <span class="sfWebDebugLogInfo">sfFilterChain->execute()</span> from SF_SYMFONY_LIB_DIR\filter\sfRenderingFilter.class.php line 33</span><br/><span class="">#5 &raquo; in <span class="sfWebDebugLogInfo">sfRenderingFilter->execute()</span> from SF_SYMFONY_LIB_DIR\filter\sfFilterChain.class.php line 53</span><br/><span class="">#4 &raquo; in <span class="sfWebDebugLogInfo">sfFilterChain->execute()</span> from SF_SYMFONY_LIB_DIR\controller\sfController.class.php line 229</span><br/><span class="">#3 &raquo; in <span class="sfWebDebugLogInfo">sfController->forward()</span> from SF_SYMFONY_LIB_DIR\controller\sfFrontWebController.class.php line 48</span><br/><span class="">#2 &raquo; in <span class="sfWebDebugLogInfo">sfFrontWebController->dispatch()</span> from SF_SYMFONY_LIB_DIR\util\sfContext.class.php line 170</span><br/><span class="sfWebDebugHighlight">#1 &raquo; in <span class="sfWebDebugLogInfo">sfContext->dispatch()</span> from SF_ROOT_DIR\web\frontend_dev.php line 13</span><br/></div>
+</td></tr>
+<tr class='sfWebDebugLogLine sfWebDebugInfo sfPHPView'><td class="sfWebDebugLogNumber">7</td><td class="sfWebDebugLogType"><img src="/sf/sf_web_debug/images/info.png" alt="Info"/>&nbsp;<span title="SF_SYMFONY_LIB_DIR\view\sfPHPView.class.php">sfPHPView</span></td><td>Decorate content with "<span class="sfWebDebugLogInfo">sf_app_dir\templates/layout.php</span>" <a href="#" onclick="sfWebDebugToggle('sfWebDebugPanelLogsDebug7'); return false;" title="Toggle debug stack"><img src="/sf/sf_web_debug/images/toggle.gif" alt="Toggle debug stack"/></a><div class="sfWebDebugDebugInfo" id="sfWebDebugPanelLogsDebug7" style="display:none"><span class="">#11 &raquo; in <span class="sfWebDebugLogInfo">sfPHPView->decorate()</span> from SF_SYMFONY_LIB_DIR\view\sfPHPView.class.php line 190</span><br/><span class="">#10 &raquo; in <span class="sfWebDebugLogInfo">sfPHPView->render()</span> from SF_SYMFONY_LIB_DIR\filter\sfExecutionFilter.class.php line 155</span><br/><span class="">#9 &raquo; in <span class="sfWebDebugLogInfo">sfExecutionFilter->executeView()</span> from SF_SYMFONY_LIB_DIR\filter\sfExecutionFilter.class.php line 116</span><br/><span class="">#8 &raquo; in <span class="sfWebDebugLogInfo">sfExecutionFilter->handleView()</span> from SF_SYMFONY_LIB_DIR\filter\sfExecutionFilter.class.php line 47</span><br/><span class="">#7 &raquo; in <span class="sfWebDebugLogInfo">sfExecutionFilter->execute()</span> from SF_SYMFONY_LIB_DIR\filter\sfFilterChain.class.php line 53</span><br/><span class="">#6 &raquo; in <span class="sfWebDebugLogInfo">sfFilterChain->execute()</span> from SF_SYMFONY_LIB_DIR\filter\sfRenderingFilter.class.php line 33</span><br/><span class="">#5 &raquo; in <span class="sfWebDebugLogInfo">sfRenderingFilter->execute()</span> from SF_SYMFONY_LIB_DIR\filter\sfFilterChain.class.php line 53</span><br/><span class="">#4 &raquo; in <span class="sfWebDebugLogInfo">sfFilterChain->execute()</span> from SF_SYMFONY_LIB_DIR\controller\sfController.class.php line 229</span><br/><span class="">#3 &raquo; in <span class="sfWebDebugLogInfo">sfController->forward()</span> from SF_SYMFONY_LIB_DIR\controller\sfFrontWebController.class.php line 48</span><br/><span class="">#2 &raquo; in <span class="sfWebDebugLogInfo">sfFrontWebController->dispatch()</span> from SF_SYMFONY_LIB_DIR\util\sfContext.class.php line 170</span><br/><span class="sfWebDebugHighlight">#1 &raquo; in <span class="sfWebDebugLogInfo">sfContext->dispatch()</span> from SF_ROOT_DIR\web\frontend_dev.php line 13</span><br/></div>
+</td></tr>
+<tr class='sfWebDebugLogLine sfWebDebugInfo sfPHPView'><td class="sfWebDebugLogNumber">8</td><td class="sfWebDebugLogType"><img src="/sf/sf_web_debug/images/info.png" alt="Info"/>&nbsp;<span title="SF_SYMFONY_LIB_DIR\view\sfPHPView.class.php">sfPHPView</span></td><td>Render "<span class="sfWebDebugLogInfo">sf_app_dir\templates/layout.php</span>" <a href="#" onclick="sfWebDebugToggle('sfWebDebugPanelLogsDebug8'); return false;" title="Toggle debug stack"><img src="/sf/sf_web_debug/images/toggle.gif" alt="Toggle debug stack"/></a><div class="sfWebDebugDebugInfo" id="sfWebDebugPanelLogsDebug8" style="display:none"><span class="">#12 &raquo; in <span class="sfWebDebugLogInfo">sfPHPView->renderFile()</span> from SF_SYMFONY_LIB_DIR\view\sfPHPView.class.php line 140</span><br/><span class="">#11 &raquo; in <span class="sfWebDebugLogInfo">sfPHPView->decorate()</span> from SF_SYMFONY_LIB_DIR\view\sfPHPView.class.php line 190</span><br/><span class="">#10 &raquo; in <span class="sfWebDebugLogInfo">sfPHPView->render()</span> from SF_SYMFONY_LIB_DIR\filter\sfExecutionFilter.class.php line 155</span><br/><span class="">#9 &raquo; in <span class="sfWebDebugLogInfo">sfExecutionFilter->executeView()</span> from SF_SYMFONY_LIB_DIR\filter\sfExecutionFilter.class.php line 116</span><br/><span class="">#8 &raquo; in <span class="sfWebDebugLogInfo">sfExecutionFilter->handleView()</span> from SF_SYMFONY_LIB_DIR\filter\sfExecutionFilter.class.php line 47</span><br/><span class="">#7 &raquo; in <span class="sfWebDebugLogInfo">sfExecutionFilter->execute()</span> from SF_SYMFONY_LIB_DIR\filter\sfFilterChain.class.php line 53</span><br/><span class="">#6 &raquo; in <span class="sfWebDebugLogInfo">sfFilterChain->execute()</span> from SF_SYMFONY_LIB_DIR\filter\sfRenderingFilter.class.php line 33</span><br/><span class="">#5 &raquo; in <span class="sfWebDebugLogInfo">sfRenderingFilter->execute()</span> from SF_SYMFONY_LIB_DIR\filter\sfFilterChain.class.php line 53</span><br/><span class="">#4 &raquo; in <span class="sfWebDebugLogInfo">sfFilterChain->execute()</span> from SF_SYMFONY_LIB_DIR\controller\sfController.class.php line 229</span><br/><span class="">#3 &raquo; in <span class="sfWebDebugLogInfo">sfController->forward()</span> from SF_SYMFONY_LIB_DIR\controller\sfFrontWebController.class.php line 48</span><br/><span class="">#2 &raquo; in <span class="sfWebDebugLogInfo">sfFrontWebController->dispatch()</span> from SF_SYMFONY_LIB_DIR\util\sfContext.class.php line 170</span><br/><span class="sfWebDebugHighlight">#1 &raquo; in <span class="sfWebDebugLogInfo">sfContext->dispatch()</span> from SF_ROOT_DIR\web\frontend_dev.php line 13</span><br/></div>
+</td></tr>
+<tr class='sfWebDebugLogLine sfWebDebugInfo sfWebResponse'><td class="sfWebDebugLogNumber">9</td><td class="sfWebDebugLogType"><img src="/sf/sf_web_debug/images/info.png" alt="Info"/>&nbsp;<span title="SF_SYMFONY_LIB_DIR\response\sfWebResponse.class.php">sfWebResponse</span></td><td>Send status "<span class="sfWebDebugLogInfo">HTTP/1.1 200 OK</span>" <a href="#" onclick="sfWebDebugToggle('sfWebDebugPanelLogsDebug9'); return false;" title="Toggle debug stack"><img src="/sf/sf_web_debug/images/toggle.gif" alt="Toggle debug stack"/></a><div class="sfWebDebugDebugInfo" id="sfWebDebugPanelLogsDebug9" style="display:none"><span class="">#7 &raquo; in <span class="sfWebDebugLogInfo">sfWebResponse->sendHttpHeaders()</span> from SF_SYMFONY_LIB_DIR\response\sfWebResponse.class.php line 396</span><br/><span class="">#6 &raquo; in <span class="sfWebDebugLogInfo">sfWebResponse->send()</span> from SF_SYMFONY_LIB_DIR\filter\sfRenderingFilter.class.php line 49</span><br/><span class="">#5 &raquo; in <span class="sfWebDebugLogInfo">sfRenderingFilter->execute()</span> from SF_SYMFONY_LIB_DIR\filter\sfFilterChain.class.php line 53</span><br/><span class="">#4 &raquo; in <span class="sfWebDebugLogInfo">sfFilterChain->execute()</span> from SF_SYMFONY_LIB_DIR\controller\sfController.class.php line 229</span><br/><span class="">#3 &raquo; in <span class="sfWebDebugLogInfo">sfController->forward()</span> from SF_SYMFONY_LIB_DIR\controller\sfFrontWebController.class.php line 48</span><br/><span class="">#2 &raquo; in <span class="sfWebDebugLogInfo">sfFrontWebController->dispatch()</span> from SF_SYMFONY_LIB_DIR\util\sfContext.class.php line 170</span><br/><span class="sfWebDebugHighlight">#1 &raquo; in <span class="sfWebDebugLogInfo">sfContext->dispatch()</span> from SF_ROOT_DIR\web\frontend_dev.php line 13</span><br/></div>
+</td></tr>
+<tr class='sfWebDebugLogLine sfWebDebugInfo sfWebResponse'><td class="sfWebDebugLogNumber">10</td><td class="sfWebDebugLogType"><img src="/sf/sf_web_debug/images/info.png" alt="Info"/>&nbsp;<span title="SF_SYMFONY_LIB_DIR\response\sfWebResponse.class.php">sfWebResponse</span></td><td>Send header "<span class="sfWebDebugLogInfo">Content-Type: text/html; charset=utf-8</span>" <a href="#" onclick="sfWebDebugToggle('sfWebDebugPanelLogsDebug10'); return false;" title="Toggle debug stack"><img src="/sf/sf_web_debug/images/toggle.gif" alt="Toggle debug stack"/></a><div class="sfWebDebugDebugInfo" id="sfWebDebugPanelLogsDebug10" style="display:none"><span class="">#7 &raquo; in <span class="sfWebDebugLogInfo">sfWebResponse->sendHttpHeaders()</span> from SF_SYMFONY_LIB_DIR\response\sfWebResponse.class.php line 396</span><br/><span class="">#6 &raquo; in <span class="sfWebDebugLogInfo">sfWebResponse->send()</span> from SF_SYMFONY_LIB_DIR\filter\sfRenderingFilter.class.php line 49</span><br/><span class="">#5 &raquo; in <span class="sfWebDebugLogInfo">sfRenderingFilter->execute()</span> from SF_SYMFONY_LIB_DIR\filter\sfFilterChain.class.php line 53</span><br/><span class="">#4 &raquo; in <span class="sfWebDebugLogInfo">sfFilterChain->execute()</span> from SF_SYMFONY_LIB_DIR\controller\sfController.class.php line 229</span><br/><span class="">#3 &raquo; in <span class="sfWebDebugLogInfo">sfController->forward()</span> from SF_SYMFONY_LIB_DIR\controller\sfFrontWebController.class.php line 48</span><br/><span class="">#2 &raquo; in <span class="sfWebDebugLogInfo">sfFrontWebController->dispatch()</span> from SF_SYMFONY_LIB_DIR\util\sfContext.class.php line 170</span><br/><span class="sfWebDebugHighlight">#1 &raquo; in <span class="sfWebDebugLogInfo">sfContext->dispatch()</span> from SF_ROOT_DIR\web\frontend_dev.php line 13</span><br/></div>
+</td></tr>
+</table></div>
+    </div>
+<div id="sfWebDebugtimeDetails" class="sfWebDebugTop" style="display:none"><h1>Timers</h1><table class="sfWebDebugLogs" style="width: 300px"><tr><th>type</th><th>calls</th><th>time (ms)</th><th>time (%)</th></tr><tr><td class="sfWebDebugLogType">Configuration</td><td class="sfWebDebugLogNumber" style="text-align: right">9</td><td style="text-align: right">6.00</td><td style="text-align: right">3</td></tr><tr><td class="sfWebDebugLogType">Factories</td><td class="sfWebDebugLogNumber" style="text-align: right">1</td><td style="text-align: right">21.00</td><td style="text-align: right">12</td></tr><tr><td class="sfWebDebugLogType">Action "default/new"</td><td class="sfWebDebugLogNumber" style="text-align: right">1</td><td style="text-align: right">25.00</td><td style="text-align: right">14</td></tr><tr><td class="sfWebDebugLogType">View "Success" for "default/new"</td><td class="sfWebDebugLogNumber" style="text-align: right">1</td><td style="text-align: right">59.00</td><td style="text-align: right">34</td></tr><tr><td class="sfWebDebugLogType">Partial "default/_form"</td><td class="sfWebDebugLogNumber" style="text-align: right">1</td><td style="text-align: right">47.00</td><td style="text-align: right">27</td></tr></table></div>
+      </div>
+
+      <script src="js/bootstrap.min.js"></script>
+    </body>
+</html>
